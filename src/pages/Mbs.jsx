@@ -20,7 +20,7 @@ function Mbs() {
                 </div>
             </div>
             <div className="" style={{ backgroundColor: "#ffe6cc" }}>
-                <h1 className="text-center pt-5">Main Bhi Swadeshi Hu Campaign 2026</h1>
+                <h1 className="text-center pt-5">Main Bhi S Hu Campaign 2026</h1>
                 <Container>
                     <Row className="border py-5">
                         <Col className="d-flex flex-column justify-content-center align-items-center">
