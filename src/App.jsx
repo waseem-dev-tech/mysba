@@ -14,7 +14,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path='/mbs' element={<Mbs/>}></Route>
+        <Route path='/' element={<Mbs/>}></Route>
         <Route path='/ssbs' element={<Ssbs/>}></Route>
       </Routes>
       <Footer/>
