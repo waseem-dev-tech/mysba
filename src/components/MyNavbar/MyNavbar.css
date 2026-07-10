@@ -1,11 +1,20 @@
 .logo {
-     width: 140px;
+    width: 140px;
     height: auto;
 }
-.navbar{
+
+.myNavbar{
     background-color: #ffae5e;
+    position: sticky !important;
+    top: 0;
+    z-index: 1050;
+    font-size: 13px;
 }
-.top-bar{
-        background-color: #EA7500;
-        font-family: white;
+
+.top-bar {
+    background-color: #EA7500;
+    font-size: 11px;
+}
+.headerText{
+    background-color: #000000;
 }

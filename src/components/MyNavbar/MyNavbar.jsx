@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -7,6 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import { Row, Col } from 'react-bootstrap';
+
 //css
 import './MyNavbar.css'
 //icons
@@ -18,11 +20,12 @@ import { FaInstagram } from "react-icons/fa";
 import logo from '../../assets/images/logo.png'
 
 function MyNavbar() {
+    //dropdown
+    const [activeDropdown, setActiveDropdown] = useState(null);
     return (
         <>
             <Container fluid>
-
-                <Row className='top-bar px-4'>
+                <Row className='top-bar px-4 '>
                     <Col className=''  >
                         <div className='  py-2 '>
                             <span className=' text-light'>JSK</span>
@@ -35,8 +38,7 @@ function MyNavbar() {
                             <span className=' text-light'>Login</span>
                         </div>
                     </Col>
-                    
-                    <Col className='d-flex justify-content-end'  lg={6}>
+                    <Col className='d-flex justify-content-end' lg={6}>
                         <div className='  py-2 '>
                             <span className=' text-light'>info@mysba.co.in</span>
                             <span className=' text-light px-3'><FaFacebook /></span>
@@ -45,11 +47,10 @@ function MyNavbar() {
                             <span className=' text-light px-3'><FaInstagram /></span>
                         </div>
                     </Col>
-
                 </Row>
             </Container>
 
-            <Navbar expand="lg" className="navbar navbar-dark px-3"  >
+            <Navbar expand="lg" className="myNavbar navbar-dark px-3" >
                 <Container fluid>
                     <Navbar.Brand >
                         <img
@@ -65,7 +66,15 @@ function MyNavbar() {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Nav.Link className='text-white' >About us</Nav.Link>
+                            <NavDropdown
+                                title="About Us"
+                                show={activeDropdown === "about"}
+                                onMouseEnter={() => setActiveDropdown("about")}
+                                onMouseLeave={() => setActiveDropdown(null)}
+                            >
+                                <NavDropdown.Item>Our Mission</NavDropdown.Item>
+                                <NavDropdown.Item>Our Vision</NavDropdown.Item>
+                            </NavDropdown>
                             <Nav.Link className='text-white' >Events</Nav.Link>
                             <Nav.Link className='text-white' >Services</Nav.Link>
                             <Nav.Link className='text-white' >Course</Nav.Link>
@@ -87,7 +96,6 @@ function MyNavbar() {
                                     Something else here
                                 </NavDropdown.Item>
                             </NavDropdown> */}
-
                         </Nav>
 
                     </Navbar.Collapse>
