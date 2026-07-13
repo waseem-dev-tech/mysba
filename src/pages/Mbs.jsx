@@ -63,7 +63,7 @@ function Mbs() {
 
             <div className="px-5">
                 <h3 className="mt-5">Why It Matters</h3>
-                <p>
+                <p className="lh-lg">
                     In today's rapidly evolving world, every individual has the power to create a positive impact through conscious choices. By choosing and promoting Swadeshi, we strengthen India's economy, generate employment opportunities, empower local businesses, and contribute towards the vision of Aatmanirbhar Bharat. A simple profile change can inspire thousands to become a part of this national movement.
                     This Campaign Symbolizes:
                     <br />

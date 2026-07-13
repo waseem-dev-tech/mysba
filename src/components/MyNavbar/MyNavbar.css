@@ -18,3 +18,73 @@
 .headerText{
     background-color: #000000;
 }
+/* dropdown */
+
+/* MyNavbar.css */
+
+/* Dropdown container */
+.navbar-dropdown .dropdown-menu {
+    background: #FFE1C4;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    padding: 10px 0;
+}
+
+/* Dropdown items */
+.navbar-dropdown-item {
+    background: #FFE1C4 !important;
+    color: #EA7500 !important;
+    padding: 12px 28px !important;
+    /* transition: all 0.3s ease !important; */
+    font-weight: 500;
+    position: relative;
+}
+
+/* .navbar-dropdown-item:hover {
+    background: #3498db !important;
+    color: #ffffff !important;
+    padding-left: 35px !important;
+} */
+
+.navbar-dropdown-item::before {
+    content: '›';
+    position: absolute;
+    left: 15px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-dropdown-item:hover::before {
+    opacity: 1;
+    left: 20px;
+}
+
+/* Nav links */
+/* .navbar-nav-link {
+    color: #FFE1C4 !important;
+    /* padding: 8px 18px !important; */
+    transition: all 0.3s ease !important;
+   
+    
+} */
+
+/* .navbar-nav-link:hover {
+    color: #3498db !important;
+} */
+
+/* .navbar-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    transition: all 0.3s ease;
+} */
+
+/* .navbar-nav-link:hover::after {
+    width: 60%;
+    left: 20%;
+} */

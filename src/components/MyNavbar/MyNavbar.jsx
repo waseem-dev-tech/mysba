@@ -18,10 +18,13 @@ import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 //images
 import logo from '../../assets/images/logo.png'
+//menu
+import menuData from '../../data/menuData';
 
 function MyNavbar() {
     //dropdown
     const [activeDropdown, setActiveDropdown] = useState(null);
+
     return (
         <>
             <Container fluid>
@@ -29,7 +32,7 @@ function MyNavbar() {
                     <Col className=''  >
                         <div className='  py-2 '>
                             <span className=' text-light'>JSK</span>
-                            <Link to="/mbs" className="px-2 text-decoration-none text-white">
+                            <Link to="/" className="px-2 text-decoration-none text-white">
                                 Main Bhi Swadeshi
                             </Link>
                             <span className=' text-light px-3'>SSBA</span>
@@ -63,41 +66,41 @@ function MyNavbar() {
                     <Navbar.Collapse id="navbarScroll" className="justify-content-end">
                         <Nav
                             className="my-2 my-lg-0 text-white navbar-nav-right"
-                            style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <NavDropdown
-                                title="About Us"
-                                show={activeDropdown === "about"}
-                                onMouseEnter={() => setActiveDropdown("about")}
-                                onMouseLeave={() => setActiveDropdown(null)}
-                            >
-                                <NavDropdown.Item>Our Mission</NavDropdown.Item>
-                                <NavDropdown.Item>Our Vision</NavDropdown.Item>
-                            </NavDropdown>
-                            <Nav.Link className='text-white' >Events</Nav.Link>
-                            <Nav.Link className='text-white' >Services</Nav.Link>
-                            <Nav.Link className='text-white' >Course</Nav.Link>
-                            <Nav.Link className='text-white' >Enterpreneurship</Nav.Link>
-                            <Nav.Link className='text-white' >Startup</Nav.Link>
-                            <Nav.Link className='text-white' >Scheme</Nav.Link>
-                            <Nav.Link className='text-white' >Job & Career</Nav.Link>
-                            <Nav.Link className='text-white' >Join Us</Nav.Link>
-                            <Nav.Link className='text-white' >Download</Nav.Link>
-                            <Nav.Link className='text-white' >Shop</Nav.Link>
-                            <Nav.Link className='text-white' >News</Nav.Link>
-                            {/* <NavDropdown title="Login" id="navbarScrollingDropdown">
-                                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action4">
-                                    Another action
-                                </NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action5">
-                                    Something else here
-                                </NavDropdown.Item>
-                            </NavDropdown> */}
+                            {menuData.map((menu) => (
+                                menu.submenu ? (
+                                    <NavDropdown
+                                        key={menu.title}
+                                        title={menu.title}
+                                        show={activeDropdown === menu.title}
+                                        onMouseEnter={() => setActiveDropdown(menu.title)}
+                                        onMouseLeave={() => setActiveDropdown(null)}
+                                        className="navbar-dropdown"
+                                    >
+                                        {menu.submenu.map((item) => (
+                                            <NavDropdown.Item
+                                                as={Link}
+                                                to={item.path}
+                                                key={item.title}
+                                                className="navbar-dropdown-item"
+                                            >
+                                                {item.title}
+                                            </NavDropdown.Item>
+                                        ))}
+                                    </NavDropdown>
+                                ) : (
+                                    <Nav.Link
+                                        as={Link}
+                                        to={menu.path}
+                                        key={menu.title}
+                                        className="text-white navbar-nav-link"
+                                    >
+                                        {menu.title}
+                                    </Nav.Link>
+                                )
+                            ))}
                         </Nav>
-
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
