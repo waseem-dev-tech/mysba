@@ -40,7 +40,7 @@ function Mbs() {
                             <img src="	https://mysba.co.in/assets/img/Register.png" width="100px" height="100px" />
                             <p className="mt-2 mb-0 ">Register Here</p>
                             <p className="fs-7 mt-0 mb-0 ">
-                                (यहाँ रजिस्टर करें / यहाँ पंजीकरण करें)
+                                {/* (यहाँ रजिस्टर करें / यहाँ पंजीकरण करें) */}
                             </p>
                         </Col>
                         <Col className="d-flex flex-column justify-content-center align-items-center">
