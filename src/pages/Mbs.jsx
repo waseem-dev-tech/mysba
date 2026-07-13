@@ -36,21 +36,21 @@ function Mbs() {
                 <h2 className="text-center pt-5">Main Bhi Swadeshi Hu Campaign 2026</h2>
                 <Container>
                     <Row className=" py-5">
-                        <Col className="d-flex flex-column justify-content-center align-items-center">
+                        <Col className="d-flex flex-column justify-content-center align-items-center" lg={4}>
                             <img src="	https://mysba.co.in/assets/img/Register.png" width="100px" height="100px" />
                             <p className="mt-2 mb-0 ">Register Here</p>
                             <p className="fs-7 mt-0 mb-0 ">
-                               
+                                (यहाँ रजिस्टर करें / यहाँ पंजीकरण करें)
                             </p>
                         </Col>
-                        <Col className="d-flex flex-column justify-content-center align-items-center">
+                        <Col className="d-flex flex-column justify-content-center align-items-center" lg={4}>
                             <img src="https://mysba.co.in/assets/img/learn.png" width="100px" height="100px" />
                             <p className="mt-2 mb-0 ">Create Your Swadeshi Profile Picture</p>
                             <p className="fs-7 mt-0 mb-0 ">
                                 (अपनी स्वदेशी प्रोफाइल पिक्चर बनाएं)
                             </p>
                         </Col>
-                        <Col className="d-flex flex-column justify-content-center align-items-center">
+                        <Col className="d-flex flex-column justify-content-center align-items-center" lg={4}>
                             <img src="	https://mysba.co.in/assets/img/Getcertified.png" width="100px" height="100px" />
                             <p className="mt-2 mb-0 ">Download Certificate</p>
                             <p className="fs-7 mt-0 mb-0 ">
